@@ -27,10 +27,12 @@ public class LetraDNI {
             System.out.println("Introduzca el número de DNI ('s' para salir):");
             try {
                 DNI=teclado.readLine();
-                int num=Integer.parseInt(DNI);
-                int aux = num/23;
-                int letra = num - (aux * 23);
-                System.out.println("La letra del DNI "+DNI+" es: "+dniLetra.charAt(letra));
+                if (!DNI.equals("s")){
+                    int num=Integer.parseInt(DNI);
+                    int aux = num/23;
+                    int letra = num - (aux * 23);
+                    System.out.println("La letra del DNI "+DNI+" es: "+dniLetra.charAt(letra));
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
